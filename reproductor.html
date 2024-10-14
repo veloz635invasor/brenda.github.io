@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canciones que te dedico</title>
+    <style>
+        body {
+            background-color: #d0dec8;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 20px;
+            padding-left: 5%;
+            padding-right: 5%;
+            font-weight: bold;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul li {
+            display: inline-block;
+            padding: 0px 20px;
+        }
+        a {
+            color: white; 
+            text-decoration: none;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="ahuevo.html">Mi amor por ti <3</a></li>
+                <li><a href="poemas.html">Poemas</a></li>
+                <li><a href="recuerdos.html">Recuerdos</a></li>
+                <li><a href="reproductor.html">Canciones que te dedico</a></li>
+                <li><a href="https://open.spotify.com/playlist/5l6kybtoKZDmQ3HorQQ7FA?si=rWsvOJw4SIqqKX8Yz4Es9w"> Playlist de Spotify</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Reproductor de audio -->
+    <audio id="musica">
+        <source id="cancionSource" src="bandolera.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const audio = document.getElementById('musica');
+        const cancionSource = document.getElementById('cancionSource');
+
+        function cambiarCancion(ruta) {
+            cancionSource.src = ruta;
+            audio.load();
+            audio.play();
+        }
+    </script>
+
+    <!-- Lista Desplegable dentro del Body -->
+    <div class="dropdown" style="margin: 20px; padding: 10px; background-color: #89f1bd;">
+        <button style="border: none; background: none;">
+            <img src="eslabon_amor_perdido.jpeg" alt="Imagen del botón" style="width: 50px; height: 50px;">
+                   Eslabon Armado
+        </button>
+        <div class="dropdown-content">
+            <a href="javascript:void(0);" onclick="cambiarCancion('bandolera.mp3')">Bandolera</a>
+            <a href="javascript:void(0);" onclick="cambiarCancion('no me dejes.mp3')">No me dejes bebe</a>
+            <a href="javascript:void(0);" onclick="cambiarCancion('regresa_mami.mp3')">Regresa Mami</a>
+            <a href="javascript:void(0);" onclick="cambiarCancion('testa.mp3')">Te extraño</a>
+            <a href="javascript:void(0);" onclick="cambiarCancion('llamarte.mp3')">Llamarte o Bloquearte</a>
+            
+        </div>
+    </div>
+
+
+
+    <div class="dropdown" style="margin: 20px; padding: 10px; background-color: #70ab8e;">
+        <button style="border: none; background: none;">
+            <img src="juniorh.jpeg" alt="Imagen del botón" style="width: 50px; height: 50px;">
+                   Junior H
+        </button>
+        <div class="dropdown-content">
+            <a href="javascript:void(0);" onclick="cambiarCancion('ella.mp3')">Ella</a>
+            <a href="javascript:void(0);" onclick="cambiarCancion('altavoz.mp3')">En altavoz</a>
+            <a href="javascript:void(0);" onclick="cambiarCancion('a tu manera.mp3')">A tu manera</a>
+            <a href="javascript:void(0);" onclick="cambiarCancion('jueves10.mp3')">Jueves 10</a>
+            <a href="javascript:void(0);" onclick="cambiarCancion('fvck.mp3')">Fvck</a>
+            <a href="javascript:void(0);" onclick="cambiarCancion('teextraño.mp3')">Te extraño</a>
+            <a href="javascript:void(0);" onclick="cambiarCancion('volveremos.mp3')">Volveremos</a>
+            <a href="javascript:void(0);" onclick="cambiarCancion('piensalo_jh.mp3')">Piensalo</a>
+            <a href="javascript:void(0);" onclick="cambiarCancion('dias_nublados.mp3')">Dias Nublados</a>
+            
+
+            
+        </div>
+
+
+        
+    </div>
+
+    <div class="dropdown" style="margin: 20px; padding: 10px; background-color: #830a0a;">
+        <button style="border: none; background: none;">
+            <img src="nata.jpeg" alt="Imagen del botón" style="width: 50px; height: 50px;">
+                   Natael Cano 
+        </button>
+        <div class="dropdown-content">
+            <a href="javascript:void(0);" onclick="cambiarCancion('ninguna_como.mp3')">Ninguna Como Ella</a>
+            <a href="javascript:void(0);" onclick="cambiarCancion('Pero No.mp3')">Pero No</a>
+            <a href="javascript:void(0);" onclick="cambiarCancion('Me Gusta.mp3')">Me gusta</a>
+            <a href="javascript:void(0);" onclick="cambiarCancion('pienso.mp3')">Pienso en ella</a>
+            
+        </div>
+
+
+        
+    </div>
+
+</body>
+</html>

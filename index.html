@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres verlo?</title>
+    <link rel="icon" href="logo.jpg">
+</head>
+<style>
+    body{
+        margin-top: 200px;
+        background-color:#673880 ;
+    }
+    .contenedor {
+      text-align: center;
+    }
+    .imagen-izquierda, .imagen-derecha {
+            position: absolute;
+            top: 65%;
+            transform: translateY(-50%);
+            width: 150px; /* Ancho de las imágenes */
+            height: 175px; /* Alto de las imágenes */
+        }
+
+        .imagen-izquierda {
+            left: 0;
+        }
+
+        .imagen-derecha {
+            right: 0;
+        }
+    .boton {
+    
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #FC0707;
+      color: #FC0707;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px; /* Espacio entre botones */
+      
+    }
+    
+    @media only screen and (max-width: 600px) {}
+
+    .texto {
+          text-align: center;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+    .imagen-arriba{
+        top: 20%;
+        width: 397px; /* Ancho de las imágenes */
+        height: 125px; /* Alto de las imágenes */
+
+    }
+    .fondo{
+        margin:0;
+        padding: 0;
+        background: url(fondo.jpg);
+        background-size: cover;
+        background-position: center;
+        font-family: sans-serif;
+    }
+  </style>
+  
+<script>alert("Quiero que sepas que no se si haya cosas feas o bonitas y si hay cosas feas veras que despues siguen bonitas y mejores, no es mucho pero es todo lo que senti por tu amor y todo lo que e sentido estos dias, te amo muhco y te amare tooooodaaaaa la vida siempre seras mi niña hermosa, no es mucho pero por lo menos es algo");</script>
+
+    <img class="imagen-arriba" src="logito,monkeys.png" alt="Imagen Arriba">
+    <img class="imagen-izquierda" src="alexa.jpg" alt="Imagen Izquierda">
+    <img class="imagen-derecha" src="alex.jpg" alt="Imagen Derecha">
+    <div class="texto">
+    <p style="font-family:Arial, Helvetica, sans-serif ;" >
+    ¿En verdad quisieras ver la pequeña sorpresa que hice desde el dia que te deje de hablar?
+    </p>
+   </div>
+   <div class="contenedor">
+    <form id="formulario" method="get">
+        <button type="submit" name="boton1">Si</button>
+        <button type="submit" name="boton2">No</button>
+    </form></div>
+  
+    
+
+<script>
+        document.getElementById("formulario").addEventListener("submit", function(event) {
+            if (event.submitter.name === "boton1") {
+                window.location.href = "ahuevo.html"; // Redirecciona a la página 1
+            } else if (event.submitter.name === "boton2") {
+                window.location.href = "chale.html"; // Redirecciona a la página 2
+            }
+            event.preventDefault(); // Evita que el formulario se envíe normalmente
+        });    
+        </script>
+</body>
+</html>
